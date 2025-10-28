@@ -74,11 +74,35 @@ cd react_19
 # Install dependencies
 npm install
 
+# Create environment variables file
+cp .env.example .env.local
+# Edit .env.local and add your API configuration
+
 # Run the development server
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the application.
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+# API Configuration
+NEXT_PUBLIC_API_URL=your_api_base_url_here
+
+# Note: The API endpoints used in this project are not publicly available.
+# You'll need to set up your own backend API or use a different API endpoint.
+# The project expects the following endpoints:
+# - POST /favourites/toggle - Toggle favorite status
+# - GET /products - Fetch product list
+```
+
+**Important:** This project uses a private API for demonstration purposes. To run this project:
+1. Set up your own backend API with similar endpoints, or
+2. Replace the API calls in `src/lib/apiServiceCall.ts` with your own API
+3. Update the `.env.local` file with your API URL
 
 ### Available Scripts
 

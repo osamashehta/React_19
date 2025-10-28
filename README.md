@@ -20,12 +20,13 @@ A comprehensive demonstration project showcasing **React 19's** latest features,
 
 ## 🎯 Overview
 
-This project demonstrates **two approaches** to implementing optimistic UI updates in modern React applications:
+This project demonstrates **three key React 19 features** for building modern, responsive applications:
 
 1. **React Query's `onMutate` approach** - Cache-level optimistic updates
 2. **React 19's `useOptimistic` hook** - Component-level optimistic updates
+3. **React 19's `<Activity>` component** - Preserve component state across visibility changes
 
-Both patterns provide instant UI feedback while maintaining data consistency and graceful error handling.
+All patterns provide enhanced user experiences through instant feedback, state preservation, and graceful error handling.
 
 ## ✨ Features
 
@@ -174,7 +175,39 @@ const handleToggle = () => {
 };
 ```
 
-### 3. Session Management with Cookies
+### 3. React 19 `<Activity>` Component (State Preservation)
+
+The `<Activity>` component is a new React 19 feature that preserves component state when toggling visibility, unlike conditional rendering which destroys and recreates components.
+
+```typescript
+const [tab, setTab] = useState<"first" | "second">("first");
+
+// ✅ WITH Activity - State is preserved
+<Activity mode={tab === "first" ? "visible" : "hidden"}>
+  <input 
+    type="text" 
+    placeholder="Type here..." 
+    // Input value is preserved when switching tabs!
+  />
+</Activity>
+
+// ❌ WITHOUT Activity - State is lost
+{tab === "first" && (
+  <input 
+    type="text" 
+    placeholder="Type here..." 
+    // Input value is lost when switching tabs
+  />
+)}
+```
+
+**Benefits:**
+- **State Preservation**: Input values, scroll positions, and component state remain intact
+- **Better UX**: Users don't lose their work when switching between tabs or panels
+- **Performance**: Avoids unnecessary re-renders and re-mounting
+- **Use Cases**: Tabs, accordions, collapsible sections, modal dialogs
+
+### 4. Session Management with Cookies
 
 The middleware automatically creates a UUID for guest users:
 
@@ -204,6 +237,7 @@ export default function middleware(req: NextRequest) {
 
 ### React 19 Features
 - **`useOptimistic` Hook**: New React 19 hook for optimistic updates
+- **`<Activity>` Component**: Preserves component state when toggling visibility
 - **`useTransition`**: Non-blocking state updates
 - **Server Components**: RSC support in Next.js 16
 

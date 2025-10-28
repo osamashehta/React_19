@@ -16,6 +16,7 @@ A comprehensive demonstration project showcasing **React 19's** latest features,
 - [Project Structure](#project-structure)
 - [Key Implementations](#key-implementations)
 - [Learn More](#learn-more)
+- [Author](#author)
 
 ## 🎯 Overview
 
@@ -232,10 +233,15 @@ export default function middleware(req: NextRequest) {
 
 Contributions are welcome! Feel free to open issues or submit pull requests.
 
-## 📄 License
+## �‍💻 Author
+
+**Osama Saqr**
+- GitHub: [@osamashehta](https://github.com/osamashehta)
+
+## �📄 License
 
 This project is for educational purposes.
 
 ---
 
-**Built with ❤️ using React 19, Next.js 16, and TypeScript**
+**Built with using React 19, Next.js 16, and TypeScript**

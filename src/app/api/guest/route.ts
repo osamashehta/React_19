@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 export async function GET() {
   const cookieStore = await cookies();
   let guestId = cookieStore.get('uuid')?.value;
-  console.log('runnnnning');
+  // console.log('runnnnning');
   if (!guestId) {
     guestId = uuidv4();
     const res = NextResponse.json({ guestId });

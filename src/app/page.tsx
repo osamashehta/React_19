@@ -11,6 +11,8 @@ export default function Home() {
         <br />
         <Link className="text-blue-800 underline" href="/useOptimistic">Use Optimistic Page</Link>
         <br />
+        <Link className="text-blue-800 underline" href="/activity">Activity Page</Link>
+        <br />
         <Link className="text-blue-800 underline" href="/">Home Page</Link>
       </div>
     </>

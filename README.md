@@ -9,13 +9,13 @@ A comprehensive demonstration project showcasing **React 19's** latest features,
 
 ## 📋 Table of Contents
 
-- [Overview]
-- [Features]
-- [Tech Stack]
-- [Getting Started]
-- [Project Structure]
-- [Key Implementations]
-- [Learn More]
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Key Implementations](#key-implementations)
+- [Learn More](#learn-more)
 
 ## 🎯 Overview
 
